@@ -6,6 +6,9 @@ import static com.example.DIRESA.util.QueryUtil.getLike;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.DIRESA.entity.empleado.Microred;
+import com.example.DIRESA.entity.empleado.Provincia;
+import com.example.DIRESA.entity.empleado.RedSalud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -33,6 +36,16 @@ public class EstablecimientoImplements implements EstablecimientoService{
 	public List<Establecimiento> findAll() {
 		
 		return establecimientorepositorio.findAll();
+	}
+
+	@Override
+	public List<RedSalud> listarRedesSalud() {
+		return establecimientorepositorio.listarRedesSalud();
+	}
+
+	@Override
+	public List<Provincia> listarProvincias() {
+		return establecimientorepositorio.listarProvincias();
 	}
 
 	@Override

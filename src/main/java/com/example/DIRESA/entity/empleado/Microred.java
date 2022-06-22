@@ -1,5 +1,6 @@
 package com.example.DIRESA.entity.empleado;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -30,6 +32,11 @@ public class Microred implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_redsalud")
+    @JsonIgnoreProperties({"microRedes","hibernateLazyInitializer", "handler"})
     private RedSalud redsalud;
+
+    @OneToMany(mappedBy = "microred")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private List<Establecimiento> establecimientos;
 
 }

@@ -10,7 +10,7 @@ import com.example.DIRESA.service.generic.GenericService;
 public interface PersonaService extends GenericService<Persona>{
 
 	Optional<Persona> findByFam(String persona) throws ServiceException;
-	
+	Optional<Persona> buscarPersonaPorDni(String dni);
 	
 
 	

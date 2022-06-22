@@ -10,10 +10,14 @@ import org.springframework.stereotype.Repository;
 import com.example.DIRESA.entity.general.Familia;
 import com.example.DIRESA.entity.general.Persona;
 
+import java.util.Optional;
+
 @Repository
 public interface PersonaRepository extends JpaRepository<Persona, Long> {
 	@Query("select c from Persona c where UPPER(c.nombreCompleto) like UPPER(:persona)")
 	Page<Familia> findByLikeFamilia(@Param("persona") String personas , Pageable pageable);  //JPQL
-	
+
+	//Busco a una persona por su DNI
+	Optional<Persona> findPersonaByDni(String dni);
 }
 

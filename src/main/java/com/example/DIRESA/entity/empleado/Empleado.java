@@ -39,13 +39,13 @@ public class Empleado implements Serializable{
     @Column(name = "id", nullable = false)
     private Long id;
 
+
     @Column(name = "dni", nullable = false, length = 12)
     private String dni;
 
     @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 
- 
     @ManyToOne
     @JoinColumn(name = "id_establecimiento")
     private Establecimiento establecimiento;

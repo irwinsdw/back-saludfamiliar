@@ -3,6 +3,9 @@ package com.example.DIRESA.service.general.interf;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.DIRESA.entity.empleado.Microred;
+import com.example.DIRESA.entity.empleado.Provincia;
+import com.example.DIRESA.entity.empleado.RedSalud;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -20,6 +23,8 @@ public interface EstablecimientoService extends GenericService<Establecimiento>{
 	List <Establecimiento>getEstble()throws ServiceException;
 	Page<Establecimiento>findAllCustom(Pageable pageable) throws ServiceException;
 	List<Establecimiento> findAll();
+	List<RedSalud> listarRedesSalud();
+	List<Provincia> listarProvincias();
 		
 }
 

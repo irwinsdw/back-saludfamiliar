@@ -1,5 +1,6 @@
 package com.example.DIRESA.entity.empleado;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -31,5 +33,9 @@ public class Provincia implements Serializable{
     @ManyToOne
     @JoinColumn(name = "id_region")
     private Region region;
+
+    @OneToMany(mappedBy = "provincia")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private List<Distrito> distritos;
 
 }

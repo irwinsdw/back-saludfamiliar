@@ -42,7 +42,7 @@ public class GenericControllner {
 
 
 protected ResponseEntity<?> getNotFount(Optional opt) {
-	if (opt.isEmpty()) {
+	if (!opt.isPresent()) {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
 				CustomResponse.builder().code(CodEnum.WARNING).message("No existe registro").build());
 	}

@@ -48,18 +48,10 @@ public class EmpleadosController  extends GenericControllner {
 	private EmpleadoVOservice empleadoVoService;
 	private String api = "Empleado Familias";
 
-
-
-	
-	
-		
-
-
-	
-	
-
-	
-	
+	@GetMapping("/listaEmpleados")
+	public List<Empleado> listarEmpleados() {
+		return empleadoServices.listarEmpleados();
+	}
 
 	@GetMapping("/vo")
 	@ResponseBody
@@ -106,7 +98,7 @@ public ResponseEntity<?> findAllCustom(@RequestParam(name = "pagina", defaultVal
 public ResponseEntity<?> findByRuc(@PathVariable("dni") String dniempleado) {
 	try {
 		Optional<Empleado> optCliente = empleadoServices.findByDni(dniempleado);
-		if (optCliente.isEmpty()) {
+		if (!optCliente.isPresent()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(CustomResponse.builder().code(CodEnum.WARNING)
 					.message("No existe empleado").build());
 		}

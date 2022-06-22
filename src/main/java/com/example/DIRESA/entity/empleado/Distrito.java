@@ -1,5 +1,6 @@
 package com.example.DIRESA.entity.empleado;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,6 +33,7 @@ public class Distrito implements Serializable{
 
     @ManyToOne
     @JoinColumn(name = "id_provincia")
+    @JsonIgnoreProperties({"distritos","hibernateLazyInitializer", "handler"})
     private Provincia provincia;
 
 }

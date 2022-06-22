@@ -127,6 +127,11 @@ public class EmpleadoImplements implements EmpleadoService{
 		}
 	}
 
+	@Override
+	public List<Empleado> listarEmpleados() {
+		return empleadoReposi.findAll();
+	}
+
 }
 
 
