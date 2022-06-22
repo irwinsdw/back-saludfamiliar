@@ -36,25 +36,21 @@ public class Encuesta implements Serializable{
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id_empleado")
-    private Empleado empleado;
-
-    @ManyToOne
     @JoinColumn(name = "id_familia")
     private Familia familia;
 
-    @Column(name = "numero_visita", nullable = false, length = 100)
+    @Column(name = "numero_visita", nullable = true, length = 100)
     private String numeroVisita;
 
-    @Column(name = "forma_visita", nullable = false, length = 100)
+    @Column(name = "forma_visita", nullable = true, length = 100)
     private String formaVisita;
 
-    @Column(name = "fecha_visita", nullable = false)
+    @Column(name = "fecha_visita", nullable = true)
     private Date fechaVisita;
 
     @Column(name = "condicion_encuesta", nullable = false, length = 100)
     private String condicionEncuesta;
 
-    @Column(name = "observacion", nullable = false, length = 100)
+    @Column(name = "observacion", nullable = true, length = 100)
     private String observacion;
 }

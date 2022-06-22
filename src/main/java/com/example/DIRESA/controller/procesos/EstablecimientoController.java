@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import com.example.DIRESA.entity.empleado.Microred;
+import com.example.DIRESA.entity.empleado.Provincia;
+import com.example.DIRESA.entity.empleado.RedSalud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -72,9 +75,18 @@ public class EstablecimientoController  extends GenericControllner {
 	public List<Establecimiento> findAll(){
 		return establecimientoservice.findAll();
 	}
+
+	@GetMapping("/redes-salud")
+	public List<RedSalud> listarMicroRedes(){
+		return establecimientoservice.listarRedesSalud();
+	}
+
+	@GetMapping("/provincias")
+	public List<Provincia> listarProvincias(){
+		return establecimientoservice.listarProvincias();
+	}
+
 	@GetMapping("/Establecimiento")
-	
-	
 	public ResponseEntity<?> findBEmpleadoVOListado(@RequestParam(name = "esta", defaultValue = "") String PERSONASFAM, @RequestParam(name = "pagina", defaultValue = "1") Integer pagina,
 			@RequestParam(name = "limite", defaultValue = "1") Integer  limite) { // http://localhost:8080/api-pedidos/v1/familias/by-nombre?familia=jaramillo
 		//en la parte de(@RequestParam(name = "familia",esto ira en el endpoint http://localhost:8080/api-pedidos/v1/familias/by-nombre?familia 

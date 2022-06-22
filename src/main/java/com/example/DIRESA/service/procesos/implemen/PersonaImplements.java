@@ -70,6 +70,10 @@ public class PersonaImplements implements PersonaService {
 		return null;
 	}
 
-	
+	@Override
+	public Optional<Persona> buscarPersonaPorDni(String dni) {
+		return personarepository.findPersonaByDni(dni);
+	}
+
 
 }

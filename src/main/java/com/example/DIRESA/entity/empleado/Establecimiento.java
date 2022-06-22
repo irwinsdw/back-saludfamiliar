@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Where;
 
 import com.example.DIRESA.entity.empleado.vo.EmpleadoVOListado;
@@ -52,6 +53,7 @@ public class Establecimiento implements Serializable{
     private String nombre;
     @ManyToOne
     @JoinColumn(name = "id_microred")
+    @JsonIgnoreProperties({"establecimientos","hibernateLazyInitializer", "handler"})
     private Microred microred;
 
 

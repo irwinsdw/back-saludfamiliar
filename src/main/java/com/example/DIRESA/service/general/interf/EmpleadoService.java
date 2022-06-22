@@ -21,18 +21,6 @@ public interface EmpleadoService extends GenericService<Empleado>{
 	
 	Optional<Empleado> findByDni(String dniempleado) throws ServiceException;
 
-	
 
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
+	List<Empleado> listarEmpleados();
 }

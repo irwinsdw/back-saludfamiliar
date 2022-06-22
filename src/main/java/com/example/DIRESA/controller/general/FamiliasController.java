@@ -74,7 +74,7 @@ public class FamiliasController  extends GenericControllner {
 	public ResponseEntity<?> findByFam(@PathVariable("familia") String familia) {
 		try {
 			Optional<Familia> optCliente = familiaservice.findByFam(familia);
-			if (optCliente.isEmpty()) {
+			if (!optCliente.isPresent()) {
 				return ResponseEntity.status(HttpStatus.NO_CONTENT).body(
 						CustomResponse.builder().code(CodEnum.WARNING).message("no existe dicha familia").build());
 			}

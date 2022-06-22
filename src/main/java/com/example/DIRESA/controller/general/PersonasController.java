@@ -47,6 +47,18 @@ public class PersonasController extends GenericControllner{
 			return super.getError(api);
 		}
 	}
+
+	@GetMapping("/burcar_por_dni/{dni}")
+	@ResponseBody
+	public ResponseEntity<?> buscarPorDni(@PathVariable String dni) {
+		try {
+			Optional<Persona> opt = personaservice.buscarPersonaPorDni(dni);
+			return super.getNotFount(opt);
+		} catch (Exception e) {
+			System.out.println(e.getLocalizedMessage());
+			return super.getError(api);
+		}
+	}
 	
 	
 	@PostMapping
