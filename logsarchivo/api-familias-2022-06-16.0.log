@@ -1,0 +1,2895 @@
+2022-06-16 08:15:27,065 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h46m9s210ms72µs700ns).
+2022-06-16 09:12:09,166 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m12s553ms276µs799ns).
+2022-06-16 10:34:25,494 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m15s259ms987µs600ns).
+2022-06-16 11:34:06,559 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        usuarioent0_.id_usuario as id_usuar1_10_,
+        usuarioent0_.clave as clave2_10_,
+        usuarioent0_.nombre as nombre3_10_,
+        usuarioent0_.usuario as usuario4_10_ 
+    from
+        usuario usuarioent0_ 
+    where
+        usuarioent0_.usuario=?
+2022-06-16 11:34:06,669 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        authoritie0_.usuario_id as usuario_1_11_0_,
+        authoritie0_.authority_id as authorit2_11_0_,
+        authoritye1_.authority_id as authorit1_0_1_,
+        authoritye1_.nombre as nombre2_0_1_ 
+    from
+        usuario_authority authoritie0_ 
+    inner join
+        authority authoritye1_ 
+            on authoritie0_.authority_id=authoritye1_.authority_id 
+    where
+        authoritie0_.usuario_id=?
+2022-06-16 11:34:12,358 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:34:12,389 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:34:12,433 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:36:06,956 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:36:06,960 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:36:06,963 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:37:32,652 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:37:34,301 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:38:02,999 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:38:03,000 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:38:03,004 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:38:50,283 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:38:50,285 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:38:50,289 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:42:37,957 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:42:37,966 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:42:37,974 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:42:42,873 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_0_,
+        empleado0_.id_distrito as id_distr4_2_0_,
+        empleado0_.dni as dni2_2_0_,
+        empleado0_.id_establecimiento as id_estab5_2_0_,
+        empleado0_.nombre as nombre3_2_0_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.id=?
+2022-06-16 11:42:42,881 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_ 
+    from
+        distrito distrito0_ 
+    where
+        distrito0_.id=?
+2022-06-16 11:42:42,883 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        provincia0_.id as id1_7_0_,
+        provincia0_.nombre as nombre2_7_0_,
+        provincia0_.id_region as id_regio3_7_0_ 
+    from
+        provincia provincia0_ 
+    where
+        provincia0_.id=?
+2022-06-16 11:42:42,886 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        region0_.id as id1_9_0_,
+        region0_.nombre as nombre2_9_0_ 
+    from
+        region region0_ 
+    where
+        region0_.id=?
+2022-06-16 11:42:42,890 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_ 
+    from
+        establecimiento establecim0_ 
+    where
+        establecim0_.id=?
+2022-06-16 11:42:42,893 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        microred0_.id as id1_5_0_,
+        microred0_.nombre as nombre2_5_0_,
+        microred0_.id_redsalud as id_redsa3_5_0_ 
+    from
+        microred microred0_ 
+    where
+        microred0_.id=?
+2022-06-16 11:42:42,896 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        redsalud0_.id as id1_8_0_,
+        redsalud0_.nombre as nombre2_8_0_ 
+    from
+        red_salud redsalud0_ 
+    where
+        redsalud0_.id=?
+2022-06-16 11:45:18,344 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:45:18,350 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:45:18,356 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:45:53,560 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:45:53,563 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:45:53,566 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:53:15,953 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:53:16,054 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:53:16,067 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:53:35,966 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:53:35,968 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:53:35,971 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:54:53,857 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:54:53,859 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:54:53,861 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:54:57,403 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 71] (through reference chain: com.example.DIRESA.entity.empleado.Empleado["establecimiento"])]
+2022-06-16 11:55:05,436 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:55:05,438 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:55:05,441 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:56:07,065 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:56:07,072 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:56:07,085 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:56:09,972 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-8] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 71] (through reference chain: com.example.DIRESA.entity.empleado.Empleado["establecimiento"])]
+2022-06-16 11:56:25,308 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:56:25,311 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:56:25,314 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:56:43,446 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:56:43,453 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:56:43,461 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:57:51,929 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 11:57:51,933 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 11:57:51,936 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 11:57:56,610 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_0_,
+        empleado0_.id_distrito as id_distr4_2_0_,
+        empleado0_.dni as dni2_2_0_,
+        empleado0_.id_establecimiento as id_estab5_2_0_,
+        empleado0_.nombre as nombre3_2_0_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.id=?
+2022-06-16 11:57:56,623 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_ 
+    from
+        distrito distrito0_ 
+    where
+        distrito0_.id=?
+2022-06-16 11:57:56,626 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        provincia0_.id as id1_7_0_,
+        provincia0_.nombre as nombre2_7_0_,
+        provincia0_.id_region as id_regio3_7_0_ 
+    from
+        provincia provincia0_ 
+    where
+        provincia0_.id=?
+2022-06-16 11:57:56,629 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        region0_.id as id1_9_0_,
+        region0_.nombre as nombre2_9_0_ 
+    from
+        region region0_ 
+    where
+        region0_.id=?
+2022-06-16 11:57:56,634 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_ 
+    from
+        establecimiento establecim0_ 
+    where
+        establecim0_.id=?
+2022-06-16 11:57:56,638 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        microred0_.id as id1_5_0_,
+        microred0_.nombre as nombre2_5_0_,
+        microred0_.id_redsalud as id_redsa3_5_0_ 
+    from
+        microred microred0_ 
+    where
+        microred0_.id=?
+2022-06-16 11:57:56,640 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        redsalud0_.id as id1_8_0_,
+        redsalud0_.nombre as nombre2_8_0_ 
+    from
+        red_salud redsalud0_ 
+    where
+        redsalud0_.id=?
+2022-06-16 12:00:52,457 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:00:52,461 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:00:52,465 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:04:56,103 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:04:56,105 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:04:56,107 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:04:58,922 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.DIRESA.entity.empleado.Establecimiento` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('anderson bengoleas')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 71] (through reference chain: com.example.DIRESA.entity.empleado.Empleado["establecimiento"])]
+2022-06-16 12:06:13,582 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:06:13,584 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:06:13,585 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:40:00,558 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleadovo0_.id_empleados as id_emple1_12_,
+        empleadovo0_.personasfam as personas2_12_,
+        empleadovo0_.dniempleado as dniemple3_12_,
+        empleadovo0_.nombreempleado as nombreem4_12_ 
+    from
+        view_empleado_listado empleadovo0_ 
+    where
+        upper(empleadovo0_.personasfam) like upper(?) limit ?
+2022-06-16 12:40:02,311 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] SQL Error: 0, SQLState: 42P01
+2022-06-16 12:40:02,314 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] ERROR: no existe la relación «view_empleado_listado»
+  Position: 188
+2022-06-16 12:40:05,376 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleadovo0_.id_empleados as id_emple1_12_,
+        empleadovo0_.personasfam as personas2_12_,
+        empleadovo0_.dniempleado as dniemple3_12_,
+        empleadovo0_.nombreempleado as nombreem4_12_ 
+    from
+        view_empleado_listado empleadovo0_ 
+    where
+        upper(empleadovo0_.personasfam) like upper(?) limit ?
+2022-06-16 12:40:05,383 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-6] SQL Error: 0, SQLState: 42P01
+2022-06-16 12:40:05,383 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-6] ERROR: no existe la relación «view_empleado_listado»
+  Position: 188
+2022-06-16 12:40:07,613 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleadovo0_.id_empleados as id_emple1_12_,
+        empleadovo0_.personasfam as personas2_12_,
+        empleadovo0_.dniempleado as dniemple3_12_,
+        empleadovo0_.nombreempleado as nombreem4_12_ 
+    from
+        view_empleado_listado empleadovo0_ 
+    where
+        upper(empleadovo0_.personasfam) like upper(?) limit ?
+2022-06-16 12:40:07,614 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-9] SQL Error: 0, SQLState: 42P01
+2022-06-16 12:40:07,614 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-9] ERROR: no existe la relación «view_empleado_listado»
+  Position: 188
+2022-06-16 12:40:12,801 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleadovo0_.id_empleados as id_emple1_12_,
+        empleadovo0_.personasfam as personas2_12_,
+        empleadovo0_.dniempleado as dniemple3_12_,
+        empleadovo0_.nombreempleado as nombreem4_12_ 
+    from
+        view_empleado_listado empleadovo0_ 
+    where
+        upper(empleadovo0_.personasfam) like upper(?) limit ?
+2022-06-16 12:40:12,803 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-8] SQL Error: 0, SQLState: 42P01
+2022-06-16 12:40:12,803 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-8] ERROR: no existe la relación «view_empleado_listado»
+  Position: 188
+2022-06-16 12:40:26,295 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:40:26,324 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:40:26,350 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:40:26,784 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:40:26,785 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:40:26,793 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:41:11,103 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        empleadovo0_.id_empleados as id_emple1_12_,
+        empleadovo0_.personasfam as personas2_12_,
+        empleadovo0_.dniempleado as dniemple3_12_,
+        empleadovo0_.nombreempleado as nombreem4_12_ 
+    from
+        view_empleado_listado empleadovo0_ 
+    where
+        upper(empleadovo0_.personasfam) like upper(?) limit ?
+2022-06-16 12:41:11,108 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-3] SQL Error: 0, SQLState: 42P01
+2022-06-16 12:41:11,109 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-3] ERROR: no existe la relación «view_empleado_listado»
+  Position: 188
+2022-06-16 12:41:16,772 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:41:16,777 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:41:16,781 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:41:38,635 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:41:38,689 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:41:38,694 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:44:39,196 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:44:39,200 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:44:39,208 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 12:54:53,962 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 12:54:53,965 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 12:54:53,967 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:07:14,830 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:07:14,834 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:07:14,837 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:07:49,416 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:07:49,418 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:07:49,421 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:08:48,219 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        empleado0_.id as id1_2_0_,
+        empleado0_.id_distrito as id_distr4_2_0_,
+        empleado0_.dni as dni2_2_0_,
+        empleado0_.id_establecimiento as id_estab5_2_0_,
+        empleado0_.nombre as nombre3_2_0_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.id=?
+2022-06-16 13:08:48,223 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_ 
+    from
+        distrito distrito0_ 
+    where
+        distrito0_.id=?
+2022-06-16 13:08:48,225 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        provincia0_.id as id1_7_0_,
+        provincia0_.nombre as nombre2_7_0_,
+        provincia0_.id_region as id_regio3_7_0_ 
+    from
+        provincia provincia0_ 
+    where
+        provincia0_.id=?
+2022-06-16 13:08:48,227 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        region0_.id as id1_9_0_,
+        region0_.nombre as nombre2_9_0_ 
+    from
+        region region0_ 
+    where
+        region0_.id=?
+2022-06-16 13:08:48,228 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_ 
+    from
+        establecimiento establecim0_ 
+    where
+        establecim0_.id=?
+2022-06-16 13:08:48,229 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        microred0_.id as id1_5_0_,
+        microred0_.nombre as nombre2_5_0_,
+        microred0_.id_redsalud as id_redsa3_5_0_ 
+    from
+        microred microred0_ 
+    where
+        microred0_.id=?
+2022-06-16 13:08:48,230 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        redsalud0_.id as id1_8_0_,
+        redsalud0_.nombre as nombre2_8_0_ 
+    from
+        red_salud redsalud0_ 
+    where
+        redsalud0_.id=?
+2022-06-16 13:09:28,523 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:09:28,553 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:09:28,561 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:11:00,902 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:11:00,911 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:11:00,920 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:12:29,897 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:12:29,902 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:12:29,909 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:12:57,658 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:12:57,660 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:12:57,664 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:13:44,737 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:13:44,740 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:13:44,745 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:13:53,309 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:13:53,312 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:13:53,314 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:25:26,790 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:25:26,793 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:25:26,826 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:32:36,530 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:32:36,532 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:32:36,537 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:33:43,221 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:33:43,225 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:33:43,226 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:38:10,827 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:38:10,829 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:38:10,830 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:39:11,551 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:39:11,553 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:39:11,557 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:39:17,069 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    insert 
+    into
+        empleado
+        (id_distrito, dni, id_establecimiento, nombre) 
+    values
+        (?, ?, ?, ?)
+2022-06-16 13:43:23,397 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:43:23,408 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:43:23,414 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:43:27,683 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:43:27,687 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:43:27,688 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:44:01,503 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:44:01,505 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:44:01,507 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:44:11,211 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        usuarioent0_.id_usuario as id_usuar1_10_,
+        usuarioent0_.clave as clave2_10_,
+        usuarioent0_.nombre as nombre3_10_,
+        usuarioent0_.usuario as usuario4_10_ 
+    from
+        usuario usuarioent0_ 
+    where
+        usuarioent0_.usuario=?
+2022-06-16 13:44:11,228 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        authoritie0_.usuario_id as usuario_1_11_0_,
+        authoritie0_.authority_id as authorit2_11_0_,
+        authoritye1_.authority_id as authorit1_0_1_,
+        authoritye1_.nombre as nombre2_0_1_ 
+    from
+        usuario_authority authoritie0_ 
+    inner join
+        authority authoritye1_ 
+            on authoritie0_.authority_id=authoritye1_.authority_id 
+    where
+        authoritie0_.usuario_id=?
+2022-06-16 13:44:16,168 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:44:16,170 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:44:16,172 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:44:30,608 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:44:30,617 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:44:30,619 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:46:29,209 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:46:29,255 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:46:29,265 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:46:58,596 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:46:58,599 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:46:58,603 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:47:50,709 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:47:50,712 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:47:50,716 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:50:09,109 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:50:09,111 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:50:09,114 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:56:42,120 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:56:42,123 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:56:42,125 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:57:21,276 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:57:21,279 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:57:21,282 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 13:59:56,225 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    select
+        empleado0_.id as id1_2_,
+        empleado0_.id_distrito as id_distr4_2_,
+        empleado0_.dni as dni2_2_,
+        empleado0_.id_establecimiento as id_estab5_2_,
+        empleado0_.nombre as nombre3_2_ 
+    from
+        empleado empleado0_ 
+    where
+        empleado0_.dni=?
+2022-06-16 13:59:56,229 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    select
+        distrito0_.id as id1_1_0_,
+        distrito0_.nombre as nombre2_1_0_,
+        distrito0_.id_provincia as id_provi3_1_0_,
+        provincia1_.id as id1_7_1_,
+        provincia1_.nombre as nombre2_7_1_,
+        provincia1_.id_region as id_regio3_7_1_,
+        region2_.id as id1_9_2_,
+        region2_.nombre as nombre2_9_2_ 
+    from
+        distrito distrito0_ 
+    left outer join
+        provincia provincia1_ 
+            on distrito0_.id_provincia=provincia1_.id 
+    left outer join
+        region region2_ 
+            on provincia1_.id_region=region2_.id 
+    where
+        distrito0_.id=?
+2022-06-16 13:59:56,232 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    select
+        establecim0_.id as id1_3_0_,
+        establecim0_.codigo as codigo2_3_0_,
+        establecim0_.id_microred as id_micro4_3_0_,
+        establecim0_.nombre as nombre3_3_0_,
+        microred1_.id as id1_5_1_,
+        microred1_.nombre as nombre2_5_1_,
+        microred1_.id_redsalud as id_redsa3_5_1_,
+        redsalud2_.id as id1_8_2_,
+        redsalud2_.nombre as nombre2_8_2_ 
+    from
+        establecimiento establecim0_ 
+    left outer join
+        microred microred1_ 
+            on establecim0_.id_microred=microred1_.id 
+    left outer join
+        red_salud redsalud2_ 
+            on microred1_.id_redsalud=redsalud2_.id 
+    where
+        establecim0_.id=?
+2022-06-16 14:00:00,903 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    insert 
+    into
+        empleado
+        (id_distrito, dni, id_establecimiento, nombre) 
+    values
+        (?, ?, ?, ?)
+2022-06-16 17:03:30,415 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h31s525ms813µs601ns).
+2022-06-16 21:24:26,669 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h21m2s80ms212µs).
