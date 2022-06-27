@@ -47,7 +47,7 @@ protected ResponseEntity<?> getNotFount(Optional opt) {
 				CustomResponse.builder().code(CodEnum.WARNING).message("No existe registro").build());
 	}
 
-	return ResponseEntity.ok(CustomResponse.builder().code(CodEnum.SUCCESS).message("Exito al recupera registro")
+	return ResponseEntity.ok(CustomResponse.builder().code(CodEnum.SUCCESS).message("Exito al recuperar registro")
 			.data(opt.get()).build());
 }
 
@@ -64,7 +64,7 @@ protected ResponseEntity<?> getNotFount(Optional opt) {
 			CustomResponse
 			.builder()
 			.code(CodEnum.SUCCESS)
-			.message(Registro_Exitoso +ms)
+			.message(Registro_Exitoso + ms)
 			.data(obj)
 			.build() 
 			);
@@ -75,7 +75,7 @@ protected ResponseEntity<?> getNotFount(Optional opt) {
 			CustomResponse
 			.builder()
 			.code(WARNING)
-			.message(error_al_crear+ms)
+			.message(error_al_crear + ms)
 			.build() 
 			);
 	

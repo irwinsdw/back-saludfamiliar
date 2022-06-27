@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -39,8 +40,8 @@ public class Empleado implements Serializable{
     @Column(name = "id", nullable = false)
     private Long id;
 
-
-    @Column(name = "dni", nullable = false, length = 12)
+	@Size(min=8,max=8,message="el dni es requerido y debe tener como mínimo {min} y máximo {max} caracteres")
+    @Column(name = "dni")
     private String dni;
 
     @Column(name = "nombre", nullable = false, length = 100)

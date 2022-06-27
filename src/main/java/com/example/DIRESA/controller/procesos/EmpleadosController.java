@@ -46,7 +46,7 @@ public class EmpleadosController  extends GenericControllner {
 	private EmpleadoService empleadoServices;
 	@Autowired
 	private EmpleadoVOservice empleadoVoService;
-	private String api = "Empleado Familias";
+	private String api = "EMPLEADO";
 
 	@GetMapping("/listaEmpleados")
 	public List<Empleado> listarEmpleados() {
@@ -154,7 +154,6 @@ public ResponseEntity<?> findAllCustoms(@RequestParam(name = "pagina", defaultVa
 				return ResponseEntity.status(HttpStatus.NO_CONTENT).body(
 						CustomResponse.builder().code(CodEnum.WARNING).message("no existe dicha Empleado").build());
 			}
-
 			return ResponseEntity.ok(CustomResponse.builder().code(CodEnum.SUCCESS).message("Empleado si existe")
 					.data(empleadoServices.findByFam(Empleado).get()).build());
 		} catch (Exception e) {
@@ -198,6 +197,5 @@ public ResponseEntity<?> findAllCustoms(@RequestParam(name = "pagina", defaultVa
 	  return empleadoServices.save(empleadoactual);
 			  }
 	  
-
 */	 
 }
