@@ -42,8 +42,11 @@ public class Familia {
     @Column(name = "asentamiento_humano", nullable = false, length = 100)
     private String asentamientoHumano;
 
-    @Column(name = "direccion", nullable = false, length = 100)
-    private String direccion;
+    @Column(name = "ahurb_hu", nullable = true, length = 100)
+    private String ahurb_hu;
+
+    @Column(name = "avcalle_jiron_pasaje", nullable = true, length = 100)
+    private String avcalle_jiron_pasaje;
 
     @Column(name = "lote", nullable = false, length = 100)
     private String lote;

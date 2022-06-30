@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+import com.example.DIRESA.entity.empleado.Encuesta;
+import com.example.DIRESA.entity.general.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -85,6 +87,31 @@ public class FamiliasController  extends GenericControllner {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
+
+	@GetMapping("/{idFamilia}/miembros")
+	public ResponseEntity<?> buscarMiembrosFamiliaPorFamiliaId(@PathVariable Long idFamilia) {
+		try {
+			List<Persona> miembosDeFamilia = familiaservice.buscarMiembrosFamiliaPorFamiliaId(idFamilia);
+
+			return ResponseEntity.ok(CustomResponse.builder().code(CodEnum.SUCCESS).message("BÚSQUEDA EXITOSA")
+					.data(miembosDeFamilia).build());
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
+
+	@GetMapping("/{idFamilia}/encuestas")
+	public ResponseEntity<?> buscarEncuestasPorFamiliaId(@PathVariable Long idFamilia) {
+		try {
+			List<Encuesta> encuestas = familiaservice.buscarEncuestasPorFamiliaId(idFamilia);
+
+			return ResponseEntity.ok(CustomResponse.builder().code(CodEnum.SUCCESS).message("BÚSQUEDA EXITOSA")
+					.data(encuestas).build());
+		} catch (Exception e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
+
 	@PostMapping
 	public ResponseEntity<?> add(@RequestBody @Validated Familia familia, BindingResult result) {
 		if (result.hasErrors()) {

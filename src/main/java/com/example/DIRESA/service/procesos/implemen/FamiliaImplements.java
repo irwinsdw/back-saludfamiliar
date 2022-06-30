@@ -7,6 +7,8 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import com.example.DIRESA.entity.empleado.Encuesta;
+import com.example.DIRESA.entity.general.Persona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -87,6 +89,16 @@ public class FamiliaImplements implements FamiliaService{
 	public Optional<Familia> findByFam(String familia) throws ServiceException {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<Persona> buscarMiembrosFamiliaPorFamiliaId(Long id) {
+		return familiarepository.buscarMiembrosFamiliaPorFamiliaId(id);
+	}
+
+	@Override
+	public List<Encuesta> buscarEncuestasPorFamiliaId(Long idFamilia) {
+		return familiarepository.buscarEncuestasPorFamiliaId(idFamilia);
 	}
 
 	@Override
