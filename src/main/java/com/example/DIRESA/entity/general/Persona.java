@@ -10,10 +10,16 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
+
+import com.example.DIRESA.entity.empleado.Clasificacionriesgo;
 import com.example.DIRESA.entity.empleado.Empleado;
+
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Builder
 @NoArgsConstructor
@@ -70,5 +76,10 @@ public class Persona {
 
     @Column(name = "ocupacion", nullable = false, length = 100)
     private String ocupacion;
+    
+    //@JoinTable(name = "persona_riesgos" es el nombre para darle a la tabla combinada que se creara 
+    @ManyToMany
+    @JoinTable(name = "persona_riesgos", joinColumns = @JoinColumn(name = "id_persona", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "id_clasificacionriesgo", referencedColumnName = "id"))
+    private Set<Clasificacionriesgo> riesgospersonas = new HashSet<>();
 
 }

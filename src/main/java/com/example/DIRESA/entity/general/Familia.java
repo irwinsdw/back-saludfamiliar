@@ -10,12 +10,19 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import com.example.DIRESA.entity.empleado.Clasificacionriesgo;
 import com.example.DIRESA.entity.empleado.Distrito;
 import com.example.DIRESA.entity.empleado.Empleado;
 import com.example.DIRESA.entity.empleado.Establecimiento;
+import com.example.DIRESA.entity.empleado.FamiliaItem;
+import com.example.DIRESA.entity.empleado.Item;
+import com.example.DIRESA.entity.socioeconomico.materialparedes;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Builder
 @NoArgsConstructor
@@ -24,6 +31,7 @@ import java.util.Date;
 @Entity
 @Table(name="familia")
 @EqualsAndHashCode
+
 public class Familia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,8 +47,7 @@ public class Familia {
     @Column(name = "telefono", nullable = false, length = 100)
     private String telefono;
 
-    @Column(name = "asentamiento_humano", nullable = false, length = 100)
-    private String asentamientoHumano;
+    
 
     @Column(name = "ahurb_hu", nullable = true, length = 100)
     private String ahurb_hu;
@@ -66,4 +73,12 @@ public class Familia {
     @ManyToOne
     @JoinColumn(name = "id_titular")
     private Empleado titular;
+    
+    
+   
+    
+ 
 }
+    
+
+

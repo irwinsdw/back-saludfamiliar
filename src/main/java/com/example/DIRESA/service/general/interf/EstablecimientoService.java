@@ -25,6 +25,6 @@ public interface EstablecimientoService extends GenericService<Establecimiento>{
 	List<Establecimiento> findAll();
 	List<RedSalud> listarRedesSalud();
 	List<Provincia> listarProvincias();
-		
+	
 }
 
