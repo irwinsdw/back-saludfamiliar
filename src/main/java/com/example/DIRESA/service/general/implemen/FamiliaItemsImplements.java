@@ -63,4 +63,9 @@ public class FamiliaItemsImplements implements FamiliaItemService{
 		return familiaitemrepository.findByFamiliaItemUpkFamiliaId(familiaId);
 	}
 
+	@Override
+	public void guardarListaFamiliaItem(List<FamiliaItem> familiaItems) {
+		familiaitemrepository.saveAll(familiaItems);
+	}
+
 }

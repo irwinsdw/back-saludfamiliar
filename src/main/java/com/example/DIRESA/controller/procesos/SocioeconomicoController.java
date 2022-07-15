@@ -57,17 +57,17 @@ public class SocioeconomicoController extends GenericControllner{
 	
 	@PostMapping
 	//@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<?> add(@RequestBody  @Validated FamiliaItem FamiliaItem, BindingResult result ) {
+	public ResponseEntity<?> add(@RequestBody  @Validated List<FamiliaItem> FamiliaItem, BindingResult result ) {
 		if (result.hasErrors()) {
 			return super.getErrors(result);
 			//return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(result.getAllErrors());
 		}
 		try {
-			FamiliaItem resFamilia = familiaitemservice.add(FamiliaItem);
-			if (Objects.isNull(resFamilia)) {
-				super.getBad(api);
-			}
-			return super.getCreated(resFamilia, api);
+			familiaitemservice.guardarListaFamiliaItem(FamiliaItem);
+//			if (Objects.isNull(resFamilia)) {
+//				super.getBad(api);
+//			}
+			return super.getCreated("Registro exitoso", api);
 		} catch (Exception e) {
 			//e.printStackTrace();
 			log.error(e.getMessage(),e);

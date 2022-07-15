@@ -71,8 +71,11 @@ public class SocioeconomicoImplements implements SocioeconomicoService{
 		return socioeconomicorepository.listaritem();
 	}
 
-	
 
+	public void crearFamiliaItems(List<FamiliaItem> lista) {
+		// TODO Auto-generated method stub
+		familiaitemrepository.saveAll(lista);
+	}
 	
 
 	
