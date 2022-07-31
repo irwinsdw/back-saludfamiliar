@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import com.example.DIRESA.entity.empleado.Clasificacionriesgo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -73,6 +74,11 @@ public class PersonaImplements implements PersonaService {
 	@Override
 	public Optional<Persona> buscarPersonaPorDni(String dni) {
 		return personarepository.findPersonaByDni(dni);
+	}
+
+	@Override
+	public List<Clasificacionriesgo> listaClasificacionRiesgo() {
+		return personarepository.listaClasificacionRiesgo();
 	}
 
 

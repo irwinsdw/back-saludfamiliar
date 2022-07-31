@@ -62,7 +62,7 @@ public class Persona {
     @Column(name = "estudios", nullable = false, length = 100)
     private String estudios;
 
-    @Column(name = "clasificacion_riesgo", nullable = false, length = 100)
+
     private String clasificacionRiesgo;
 
     @Column(name = "idioma", nullable = false, length = 100)

@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -76,6 +77,11 @@ public class PersonasController extends GenericControllner{
 			log.error(e.getMessage(), e);
 			return super.getError(api);
 		}
+	}
+
+	@GetMapping("/clasificacion-riesgo")
+	public ResponseEntity<?> listaClasificacionRiesgo() {
+		return new ResponseEntity<>(personaservice.listaClasificacionRiesgo(), HttpStatus.OK);
 	}
 	
 	
